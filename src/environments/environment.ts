@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  endpoint: '/prospectos-vida'
+  origin: 'http://localhost:8080',
+  endpoint: '/coWorking'
 };
 
 /*

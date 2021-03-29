@@ -29,6 +29,8 @@ import { MenuItem } from '@core/modelo/menu-item';
 })
 export class NavbarComponent implements OnInit {
 
+  titulo = 'CoWorking';
+
   @Input()
   items: MenuItem[];
 
