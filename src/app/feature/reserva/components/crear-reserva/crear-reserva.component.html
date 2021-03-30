@@ -1,24 +1,27 @@
 <div class="card bg-light text-dark py-2 my-2">    
+    <div class="card-header text-left">
+        Crear Reserva
+      </div>
     <div class="card-body">
     
         <form >
             <div class="form-group row">
                 <label for="documentNumber">Numero de documento</label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" [(ngModel)]="reserva.persona.id" name="documentNumber">
+                    <input id="numeroDocumentoCrearReserva" class="form-control" type="text" [(ngModel)]="reserva.persona.id" name="documentNumber">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="name">Nombre</label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" [(ngModel)]="reserva.persona.nombre" name="name">
+                    <input id="nombreCrearReserva" class="form-control" type="text" [(ngModel)]="reserva.persona.nombre" name="name">
                 </div>
             </div>
         
             <div class="form-group row">
                 <label for="dateBirth">Fecha de reserva</label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="date" [(ngModel)]="reserva.fechaReserva" name="dateBirth">
+                    <input id="fechaCrearReserva" class="form-control" type="date" [(ngModel)]="reserva.fechaReserva" name="dateBirth">
                 </div>
             </div>
         

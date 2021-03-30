@@ -17,6 +17,7 @@ import {ReservaService} from './shared/service/reserva.service';
     FormsModule,
     SharedModule
   ],
-  providers: [ReservaService]
+  providers: [ReservaService],
+  bootstrap: [ReservaComponent]
 })
 export class ReservaModule { }

@@ -16,7 +16,7 @@ const routes: Routes = [
         component: CrearReservaComponent
       },
       {
-        path: 'listar/:idPersona',
+        path: 'buscar',
         component: ListarReservaComponent
       },
       {
