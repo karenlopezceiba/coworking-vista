@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 import { Reserva } from '@reserva/shared/model/reserva';
 import { ReservaService } from '@reserva/shared/service/reserva.service';
@@ -8,15 +8,13 @@ import { ReservaService } from '@reserva/shared/service/reserva.service';
   templateUrl: './listar-reserva.component.html',
   styleUrls: ['./listar-reserva.component.css']
 })
-export class ListarReservaComponent implements OnInit {
+export class ListarReservaComponent {
 
   numeroDocumentoPersona: number;
   public listaReservas: Reserva[];
 
   constructor(protected reservaServicio: ReservaService, protected router: Router) { }
 
-  ngOnInit(): void {
-  }
 
   public buscar(): void{
     this.reservaServicio.listarReservas(this.numeroDocumentoPersona).subscribe(

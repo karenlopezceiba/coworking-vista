@@ -7,10 +7,10 @@
             <div class="form-group form-inline row">
                 <label for="documentNumber">Numero de documento</label>
                 <div class="col-sm-6">
-                <input id="numeroDocumentoCrearReserva" class="form-control" type="text" [(ngModel)]="numeroDocumentoPersona" name="documentNumber">
+                <input id="numeroDocumentoConsultaReserva" class="form-control" type="text" [(ngModel)]="numeroDocumentoPersona" name="documentNumber">
                 </div>
                 <div class="col-sm-6">
-                    <button class="btn btn-secondary" (click) = 'buscar()' type="button">Consultar</button>
+                    <button id="botonBuscarReserva" class="btn btn-secondary" (click) = 'buscar()' type="button">Consultar</button>
                 </div>      
             </div>
           </form>
@@ -26,14 +26,14 @@
               <th scope="col">modificar</th>
             </tr>
             </thead>
-            <tbody class="align-middle">
+            <tbody class="align-middle reservas">
             <tr *ngFor="let reserva of listaReservas; index as i">
               <th scope="row">{{ i + 1 }}</th>
               <td>{{reserva.persona.nombre}}</td>
               <td>{{reserva.persona.id}}</td>
               <td>{{reserva.fechaReserva}}</td>
               <td>{{reserva.valorAPagar}}</td>
-              <td><button class="btn btn-danger" (click) = 'eliminar(reserva)'>eliminar</button></td>
+              <td><button id="botonEliminarReserva" class="btn btn-danger" (click) = 'eliminar(reserva)'>eliminar</button></td>
             </tr>
             </tbody>
           </table>
