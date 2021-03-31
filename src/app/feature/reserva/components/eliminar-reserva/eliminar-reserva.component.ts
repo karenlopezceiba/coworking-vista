@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReservaService } from '../../shared/service/reserva.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-eliminar-reserva',
@@ -23,8 +22,7 @@ export class EliminarReservaComponent implements OnInit {
         if(id){
           this.reservaServicio.eliminarReserva(id).subscribe(
             () => {
-              this.router.navigate(['/reserva']),
-              swal.fire('Reserva eliminada', 'La reserva fue eliminada con exito', 'success')
+              this.router.navigate(['/reserva'])
             }
           )
         }

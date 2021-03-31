@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Reserva } from '../../shared/model/reserva';
 import { ReservaService } from '../../shared/service/reserva.service';
 import { Persona } from 'src/app/feature/persona/shared/model/persona';
-import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-crear-reserva',
@@ -24,8 +23,7 @@ export class CrearReservaComponent implements OnInit {
   public crear(): void{
     this.reservaServicio.crear(this.reserva).subscribe(
       () => {
-        this.router.navigate(['/reserva']),
-        swal.fire('Reserva creada', `Reserva para la fecha ${this.reserva.fechaReserva}  a nombre de persona con identificacion numero ${this.reserva.persona.id} fue creada con éxito`, 'success')
+        this.router.navigate(['/reserva'])
       }
     )
   }
