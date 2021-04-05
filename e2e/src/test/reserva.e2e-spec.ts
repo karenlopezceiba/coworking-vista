@@ -34,18 +34,6 @@ describe('workspace-project Reserva', () => {
         expect(1).toBe(reserva.contarReservas());
     });
 
-    it('Deberia consultar reservas', () => {
-        const NUMERO_IDENTIFICACION_PERSONA = '9999000';
-
-        page.navigateTo();
-        navBar.clickBotonReservas();
-        reserva.clickConsultarReservas();
-        reserva.ingresarNumeroDocumentoConsulta(NUMERO_IDENTIFICACION_PERSONA);
-        reserva.clickBotonConsultarReservas();
-        
-        expect(1).toBe(reserva.contarReservas());
-    });
-
     it('Deberia eliminar reserva', () => {
         const NUMERO_IDENTIFICACION_PERSONA = '9999001';
         const NOMBRE_PERSONA = 'persona de pruebas';
