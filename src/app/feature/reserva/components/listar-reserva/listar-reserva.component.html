@@ -7,7 +7,7 @@
             <div class="form-group form-inline row">
                 <label for="documentNumber">Numero de documento</label>
                 <div class="col-sm-6">
-                <input id="numeroDocumentoConsultaReserva" class="form-control" type="text" [(ngModel)]="numeroDocumentoPersona" name="documentNumber">
+                <input id="numeroDocumentoConsultaReserva" class="form-control" type="number" [(ngModel)]="numeroDocumentoPersona" name="documentNumber">
                 </div>
                 <div class="col-sm-6">
                     <button id="botonBuscarReserva" class="btn btn-secondary" (click) = 'buscar()' type="button">Consultar</button>
