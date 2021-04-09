@@ -11,7 +11,6 @@ export class ReservaService {
   constructor(protected http: HttpService) { }
 
   public crear(reserva: Reserva){
-    console.log(reserva);
     return this.http.doPost<Reserva, boolean>(`${environment.endpoint}/reservas`, reserva, this.http.optsName('crear Reserva')).pipe(
       catchError(e => {
         console.error(e.error.mensaje);

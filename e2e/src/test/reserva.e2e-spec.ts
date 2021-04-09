@@ -35,7 +35,7 @@ describe('workspace-project Reserva', () => {
     });
 
     it('Deberia eliminar reserva', () => {
-        const NUMERO_IDENTIFICACION_PERSONA = '9999001';
+        const NUMERO_IDENTIFICACION_PERSONA = '9999002';
         const NOMBRE_PERSONA = 'persona de pruebas';
         const FECHA_RESERVA = '27-04-2021';
 
